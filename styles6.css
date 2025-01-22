@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --primary:#FF6F61 ;
+    --secondary: #00897B;
+    --accent: #C6FF00;
+    --background: #F4F4F4;
+    --text: #212121;
+}
+body{
+    font-size: 16px;
+    font-family: "Roboto";
+    padding: 0;
+    margin: 0;
+}
+section{
+    margin-bottom: 5rem;
+}
+main{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+h1,h2,h3{
+    font-family: "Poppins";
+}
+h1{
+    color: var(--primary);
+}
+h2{
+    color: var(--secondary);
+}
+h3{
+    color: var(--text);
+}
+p{
+    color: var(--text);
+}
+a{
+    text-decoration: none;
+}
+
+
+/* button */
+button {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    background-color: var(--accent);
+    font-family: "Poppins";
+    font-weight: 600;
+    color: var(--secondary);
+    border-radius: 1rem;
+    border: none;
+    transition: transform 0.3s ease;
+}
+button:hover{
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+
+/* navigation bar */
+nav *{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: white;
+    width: 98%;
+    margin: 1rem auto 0 auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px 5px lightgray;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+nav ul li{
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: var(--secondary);
+    font-family: "Poppins";
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+nav ul li:hover{
+    background-color: var(--accent);
+    border-radius: 1rem;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+nav h1{
+    padding: 1rem;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+nav h1:hover{
+    border-radius: 1rem;
+    transform: scale(1.12);
+    cursor: pointer;
+}
+
+
+
+/* hero section */
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero h1{
+    font-size: 3rem;
+    text-align: center;
+}
+.hero p{
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+}
+input[type="email"]{
+    width: 500px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    background-color: var(--background);
+    border: none;
+    border-radius: 4px;
+}
+
+
+
+/* features */
+.features ul{
+    list-style: none;
+}
+.features ul li{
+    margin-bottom: 2rem;
+}
+.features h2{
+    margin: 0;
+}
+.features h3{
+    font-size: 2rem;
+    margin: 0;
+}
+.features p{
+    font-size: 1.5rem;
+    margin: 4px 0 0 0;
+}
+
+
+/* courses and testnomials*/
+.courses, .testimonials{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: max-content;
+    height: max-content;
+    min-width: 320px;
+    max-width: 320px;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    box-shadow: 2px 5px 15px 5px lightgray;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.card h1,.card h2,.card p{
+    text-align: center;
+}
+.card h1{
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--text);
+    padding: 1rem;
+    padding-bottom: 0;
+}
+.card h2{
+    font-size: 2rem;
+    margin: 1.25rem 0;
+    color: var(--text);
+}
+.card p{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
+}
+.card img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+.card button{
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* faqs*/
+.faq ul{
+    list-style: none;
+}
+.faq ul li{
+    margin-bottom: 1rem;
+}
+.faq h3{
+    font-size: 1.5rem;
+    margin: 0;
+}
+.faq p{
+    font-size: 1.25rem;
+    margin-top: 4px;
+}
+.faq h3::before{
+    content: "Q: ";
+}
+
+/* footer */
+footer{
+    font-size: 1rem;
+    padding: 24px;
+    background-color: var(--background);
+}
+address{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+@media (max-width: 768px) and (min-width: 590px){
+    body{
+        font-size: 14px;
+    }
+    
+    nav{
+        flex-direction: column;
+        padding: 0;
+    }
+    nav h1{
+        padding: 0;
+    }
+
+    .courses{
+        flex-direction: column;
+    }
+    .cards {
+        max-width: 90%;
+        flex-direction: row;
+        padding: 0;
+        gap: 1.5rem;
+        height: min-content;
+    }
+    .img-div{
+        width: 60%;
+    }
+    .cards img{
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+    }
+    .cards h1{
+        padding-bottom: 0;
+    }
+    .cards button{
+        display: block;
+        margin: 0 auto;s
+    }
+    .inner{
+        padding-bottom: 16px;
+        width: 70%;
+    }
+    .hero input{
+        width: 100%;
+    }
+    .features ul, .faq ul{
+        padding-inline-start: 0;
+    }
+    .main{
+        padding: 16px;
+    }
+    .features h3{
+        font-size: 24px;
+    }
+    .features p{
+        font-size: 18px;
+    }
+    .hero h1{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 589px){
+    body{
+        font-size: 14px;
+    }
+    nav {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    nav ul{
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        padding: 0 8px 0 8px;
+    }
+    nav ul li{
+        font-size: 16px;
+        padding: 8px;
+    }
+    nav ul{
+        flex-direction: column;
+        padding: 0;
+    }
+    nav h1{
+        padding: 0;
+    }
+    .cards img{
+        display: none;
+    }
+    .hero input{
+        width: 100%;
+    }
+    .features ul, .faq ul{
+        padding-inline-start: 0;
+    }
+    .main{
+        padding: 16px;
+    }
+    .features h3{
+        font-size: 24px;
+    }
+    .features p{
+        font-size: 18px;
+    }
+    .faq h3{
+        font-size: 18px;
+    }
+    .faq p{
+        font-size: 16px;
+    }
+    .hero h1{
+        font-size: 40px;
+    }
+
+}
