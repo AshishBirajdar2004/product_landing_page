@@ -135,6 +135,7 @@ nav h1:hover{
     gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
+    padding: 24px;
 }
 
 .hero{
