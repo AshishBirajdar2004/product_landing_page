@@ -19,14 +19,23 @@ body{
     padding: 0;
     margin: 0;
 }
-section{
-    margin-bottom: 5rem;
+section:not(:last-child){
+    margin-bottom: 2rem;
 }
-main{
+
+
+#hero{
+    background-color: var(--primary);
+    margin-bottom: 0;
+}
+#features, #faq{
+    background-color: #fff8f1;
+}
+.container{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 24px;
 }
 
 
@@ -82,11 +91,10 @@ nav{
     top: 0;
     left: 0;
     z-index: 3;
-    background-color: white;
-    width: 98%;
-    margin: 1rem auto 0 auto;
-    border-radius: 1rem;
-    box-shadow: 5px 5px 15px 5px lightgray;
+    background-color: white; 
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: 4px 4px 10px #b0bec5;
 }
 nav ul{
     display: flex;
@@ -94,7 +102,7 @@ nav ul{
     flex-wrap: wrap;
 }
 nav ul li{
-    padding: 1rem;
+    padding: 10px 20px;
     font-size: 1.25rem;
     color: var(--secondary);
     font-family: "Poppins";
@@ -108,7 +116,7 @@ nav ul li:hover{
     cursor: pointer;
 }
 nav h1{
-    padding: 1rem;
+    padding: 10px 20px;
     font-size: 2rem;
     transition: transform 0.3s ease;
 }
@@ -121,26 +129,41 @@ nav h1:hover{
 
 
 /* hero section */
+.hero_wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .hero{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 50vh;
+    margin-bottom: 0 !important;
 }
 .hero h1{
     font-size: 3rem;
     text-align: center;
+    color: var(--background);
+    margin: 0;
 }
 .hero p{
     font-size: 1.25rem;
     text-align: center;
-    margin: 0 0 1.5rem 0;
+    color: var(--background);
+    margin: 0;
+    max-width: 60ch;
 }
 input[type="email"]{
     width: 500px;
     height: 50px;
     font-size: 1rem;
     padding: 10px 20px;
-    margin-bottom: 1rem;
     background-color: var(--background);
     border: none;
     border-radius: 4px;
@@ -186,8 +209,9 @@ input[type="email"]{
     flex-direction: column;
     justify-content: space-between;
     border-radius: 1rem;
-    box-shadow: 2px 5px 15px 5px lightgray;
+    box-shadow: 4px 4px 10px #b0bec5;
     transition: transform 0.3s ease;
+    background-color: white;
 }
 .card:hover{
     cursor: pointer;
@@ -246,7 +270,7 @@ input[type="email"]{
 footer{
     font-size: 1rem;
     padding: 24px;
-    background-color: var(--background);
+    background-color: #f8f8f8;
 }
 address{
     margin: 0 auto;
@@ -291,7 +315,7 @@ address{
     }
     .cards button{
         display: block;
-        margin: 0 auto;s
+        margin: 0 auto;
     }
     .inner{
         padding-bottom: 16px;
@@ -370,4 +394,23 @@ address{
         font-size: 40px;
     }
 
+}
+
+@media (min-width: 425px){
+    .hero_wrapper{
+        gap: 1.5rem;
+    }
+    .hero_img img{
+        width: 400px;
+    }
+}
+@media (min-width: 1024px){
+    .hero_img img{
+        width: 500px;
+    }
+}
+@media (min-width: 1024px){
+    .hero_wrapper{
+        gap: 2rem;
+    }
 }
